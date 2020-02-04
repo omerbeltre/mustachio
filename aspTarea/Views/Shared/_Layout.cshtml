@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container justify-content-center">
+            <img src="~/IMG/logo.jpg" />
+        </div>
+        <div class="container justify-content-center">
+            <div class="navbar-headerr">
+                <ul class="nav navbar navbar-collapse">
+                    <li class="px-3">@Html.ActionLink("INICIO", "Index", "Home")</li>
+                    <li class="px-3">@Html.ActionLink("NOSOTROS", "About", "Home")</li>
+                    <li class="px-3">@Html.ActionLink("GALERIA", "Contact", "Home")</li>
+                    <li class="px-3">@Html.ActionLink("BLOG", "Index", "Home")</li>
+                    <li class="px-3">@Html.ActionLink("CONTACTO", "About", "Home")</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="img1">
+        <img src="~/IMG/the-beacon.jpg" height="450px" ; />
+        <h2 class="t1">THE BEAKON TO ALL MANKIND</h2>
+        <h5 class="t2">Our website templates are created with</h5>
+        <h5 class="t3">Inspiration, checked for quality and originality</h5>
+        <h5 class="t4">and meticulously sliced and coded.</h5>
+        <h5 class="t5">Read more</h5>
+    </div>
+    
+    <div>
+        <img class="father" src="~/IMG/the-father.jpg" />
+        <img class="actor" src="~/IMG/the-actor.jpg" />
+        <img class="nerd" src="~/IMG/the-nerd.jpg" />
+        <h3 class="imgf">The Father</h3>
+        <h3 class="imga">The Actor</h3>
+        <h3 class="imgn">The Nerd</h3>
+
+    </div>
+    <div class="pie">
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer class="fondo">
+                <img class="icontwitter" src="~/IMG/icontwitter.jpg" />
+                <img class="iconfacebook" src="~/IMG/iconfacebook.jpg" />
+                <img class="icongoogle" src="~/IMG/icongoogle.jpg" />
+                <img class="iconpinterest" src="~/IMG/iconpinterest.jpg" />
+                <p class="fecha">&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            </footer>
+        </div>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
